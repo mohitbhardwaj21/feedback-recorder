@@ -25,6 +25,33 @@ export class FeedbackFormComponent implements OnInit {
     { name: 'React' },
     { name: 'Project' },
   ];
+  educatorList = [
+    { name: 'Angad Bindra' },
+    { name: 'Banani Sarkar' },
+    { name: 'Chandan Yadav' },
+    { name: 'Chebolu Saiguptha' },
+    { name: 'Deepak' },
+    { name: 'Divyansh' },
+    { name: 'Ezhilan' },
+    { name: 'Gurumoorthy' },
+    { name: 'Haridas' },
+    { name: 'Isravel' },
+    { name: 'Kamal Sharma' },
+    { name: 'Kunal Tiwari' },
+    { name: 'Mohit Bhardwaj' },
+    { name: 'Rajakumar' },
+    { name: 'Sachin Kumar' },
+    { name: 'Sahil Rai' },
+    { name: 'Tej' },
+    { name: 'Umesha' },
+  ];
+  rateArray = [
+    { point: 1, comment: 'Poor' },
+    { point: 2, comment: 'Needs Improvement' },
+    { point: 3, comment: 'Met Expectations' },
+    { point: 4, comment: 'Good Performing' },
+    { point: 5, comment: 'Outstanding' },
+  ];
   successMessage = null;
   errorMessage = null;
   feedbackForm = this.fb.group({

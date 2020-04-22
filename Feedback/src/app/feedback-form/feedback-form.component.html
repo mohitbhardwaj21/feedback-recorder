@@ -20,7 +20,12 @@
                         <div class="form-group">
                             <mat-form-field appearance="outline" class="example-full-width">
                                 <mat-label>Name of Educator</mat-label>
-                                <input matInput placeholder="Placeholder" formControlName="empName" />
+
+                                <mat-select formControlName="empName">
+                                    <mat-option *ngFor="let educator of educatorList" [value]="educator.name">
+                                        {{ educator.name }}
+                                    </mat-option>
+                                </mat-select>
                             </mat-form-field>
                         </div>
                         <div class="form-group">
@@ -36,8 +41,12 @@
                         <div class="form-group">
                             <mat-form-field appearance="outline" class="example-full-width">
                                 <mat-label>Rate the Educator</mat-label>
-                                <input type="number" minimum="1" maximum="5" formControlName="rating" matInput placeholder="Placeholder" />
-                                <mat-hint>Hint:Maximum 5; Minimum 1</mat-hint>
+                                <mat-select formControlName="rating">
+                                    <mat-option *ngFor="let rate of rateArray" [value]="rate.point">
+                                        {{ rate.point }} : {{rate.comment}}
+                                    </mat-option>
+                                </mat-select>
+                                <mat-hint>Hint: Minimum 1 ; Maximum 5</mat-hint>
                             </mat-form-field>
                         </div>
                         <div class="form-group">
