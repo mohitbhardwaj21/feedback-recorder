@@ -17,10 +17,15 @@
                 </div>
                 <div class="card-body">
                     <form [formGroup]="feedbackForm" class="form" (ngSubmit)="submitForm()">
+                    <div class="form-group">
+                            <mat-form-field appearance="outline" class="example-full-width">
+                                <mat-label>Enter your Employee Id</mat-label>
+                                <input type="number" formControlName="empId" matInput>
+                            </mat-form-field>
+                        </div>
                         <div class="form-group">
                             <mat-form-field appearance="outline" class="example-full-width">
                                 <mat-label>Name of Educator</mat-label>
-
                                 <mat-select formControlName="empName">
                                     <mat-option *ngFor="let educator of educatorList" [value]="educator.name">
                                         {{ educator.name }}

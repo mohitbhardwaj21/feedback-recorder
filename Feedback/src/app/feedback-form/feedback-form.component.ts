@@ -55,6 +55,7 @@ export class FeedbackFormComponent implements OnInit {
   successMessage = null;
   errorMessage = null;
   feedbackForm = this.fb.group({
+    empId: ['', [Validators.required]],
     empName: ['', [Validators.required]],
     courseOpted: ['', [Validators.required]],
     rating: ['', [Validators.required]],
@@ -63,6 +64,7 @@ export class FeedbackFormComponent implements OnInit {
   ngOnInit() {}
   submitForm() {
     const newObj = {
+      empId: this.feedbackForm.value.empId,
       courseOpted: this.feedbackForm.value.courseOpted,
       rating: this.feedbackForm.value.rating,
       comments: this.feedbackForm.value.comments,
