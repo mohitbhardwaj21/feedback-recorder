@@ -1,0 +1,44 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <br />
+            <mat-card>
+                <div class="card-header">
+                    <h5 class="text-center">
+                <mat-icon>account_circle</mat-icon>
+                    Login</h5>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="loginForm" class="form" (ngSubmit)="login()">
+                        <div class="form-group">
+                            <mat-form-field appearance="outline" class="example-full-width">
+                                <mat-label>Enter your user Id</mat-label>
+                                <input type="text" formControlName="userId" matInput>
+                                <mat-hint>Hint:Eg mohit.bhardwaj01</mat-hint>
+                            </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field appearance="outline" class="example-full-width">
+                                <mat-label>Pass Key</mat-label>
+                                 <input type="password" formControlName="passKey" matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="form-group text-center">
+                            <button mat-raised-button type="submit">Login</button>
+                        </div>
+                    </form>
+                    <div *ngIf="successMessage" class="text-success text-center">
+                        <h5>{{ successMessage }}</h5>
+                    </div>
+                    <div *ngIf="errorMessage" class="text-danger text-center">
+                        <h5>{{ errorMessage }}</h5>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<div>
+<router-outlet></router-outlet>
+</div>

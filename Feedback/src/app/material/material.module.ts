@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from "@angular/core";
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -35,14 +35,19 @@ import {
   MatTooltipModule,
   MatTreeModule,
   MatFormFieldModule,
-} from '@angular/material';
-import {MatIconModule} from '@angular/material/icon';
-
+} from "@angular/material";
+import { MatIconModule } from "@angular/material/icon";
 
 const MaterialComponents = [
   MatButtonModule,
-  MatIconModule, MatSliderModule,
-  MatSelectModule, MatCardModule,
+  MatPaginatorModule,
+  MatSnackBarModule,
+  MatTableModule,
+  MatProgressSpinnerModule,
+  MatIconModule,
+  MatSliderModule,
+  MatSelectModule,
+  MatCardModule,
   MatFormFieldModule,
   MatInputModule,
 ];
@@ -50,6 +55,6 @@ const MaterialComponents = [
 @NgModule({
   // declarations: [],
   imports: [MaterialComponents],
-  exports: [MaterialComponents]
+  exports: [MaterialComponents],
 })
-export class MaterialModule { }
+export class MaterialModule {}
